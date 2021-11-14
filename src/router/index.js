@@ -62,7 +62,7 @@ const router =  new Router({
   routes: [
     {
       path: '/',
-      component: () => import('@/pages/Index/template.vue')
+      component: () => import('@/pages/Index/template.vue')   // 路由懒加载
     },
     {
       path: '/login',
