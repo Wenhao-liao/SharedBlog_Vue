@@ -1,27 +1,24 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue';
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
-// import { Button, Select } from 'element-ui';
-import { Loading } from 'element-ui';
-import App from './App';
-import router from './router';
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import store from './store'
+import Util from '@/helpers/util'
 
 
+Vue.use(ElementUI)
+Vue.use(Util)
 
-Vue.config.productionTip = false;
-Vue.use(ElementUI);
-Vue.use(Loading.directive);
-Vue.prototype.$loading = Loading.service;
-// Vue.use(Button)
-// Vue.use(Select)
-
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
-var app = new Vue({
+new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
-  template: '<App/>',
+  template: '<App/>'
 })
